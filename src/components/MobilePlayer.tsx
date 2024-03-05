@@ -21,8 +21,9 @@ const MobilePlayer: React.FC<MobilePlayerProps> = ({ videoId }) => {
           setTimeout(() => {
             if (controlRef.current) {
               try {
-                controlRef.current.play();
+                controlRef.current.play().then(() => {
                 setPaused(false);
+            }).catch((err) => {console.log(err)});
               } catch (err) {
                 console.log(err);
               }
