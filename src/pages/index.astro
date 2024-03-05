@@ -1,0 +1,30 @@
+---
+import Shift from "../components/Shift";
+import MobilePlayer from "../components/MobilePlayer";
+import Layout from "../components/layout.astro";
+---
+
+<Layout>
+  <Shift client:only />
+  <div
+    class="relative z-10 p-8 w-screen h-screen inset-0 flex flex-col justify-center snap-end"
+  >
+    <h1 class="font-bold text-4xl">
+      hi,
+      <br />
+      i am mekhla.
+    </h1>
+    <br />
+    a cute, beautiful, and talented videographer.
+    <br />
+    i make commercials, reels, and short films.
+    <br />
+    scroll down to see my work.
+  </div>
+  <div class="w-screen h-screen z-10 relative snap-end">
+    <MobilePlayer client:only />
+  </div>
+  <div class="w-screen h-screen z-10 relative snap-end">
+    <MobilePlayer client:only />
+  </div>
+</Layout>

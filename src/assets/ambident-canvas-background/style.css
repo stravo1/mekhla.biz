@@ -1,0 +1,5 @@
+.noise-bg {
+  background-image: url("./noise.png");
+  position: fixed;
+  pointer-events: none;
+}
