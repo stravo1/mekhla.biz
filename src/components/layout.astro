@@ -15,8 +15,15 @@ import "./styles.css";
     <title>Astro</title>
   </head>
   <body class="josefin-sans">
-    <div class="w-screen h-screen overflow-auto snap-y snap-mandatory">
+    <div
+      class="sm:block lg:hidden w-screen h-screen overflow-auto snap-y snap-mandatory"
+    >
       <slot />
+    </div>
+    <div
+      class="sm:hidden lg:flex w-screen h-screen text-4xl font-bold justify-center items-center"
+    >
+      Desktop site is under construction! Please view on mobile.
     </div>
   </body>
 </html>

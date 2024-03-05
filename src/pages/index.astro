@@ -2,6 +2,9 @@
 import Shift from "../components/Shift";
 import MobilePlayer from "../components/MobilePlayer";
 import Layout from "../components/layout.astro";
+import insta from "../assets/logos/insta.svg";
+import whatsapp from "../assets/logos/whatsapp.svg";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
@@ -25,6 +28,24 @@ import Layout from "../components/layout.astro";
     <MobilePlayer client:only />
   </div>
   <div class="w-screen h-screen z-10 relative snap-end">
-    <MobilePlayer client:only />
+    <MobilePlayer videoId="fogg" client:only />
+  </div>
+  <div
+    class="contact-page w-screen h-screen flex z-10 relative flex-col justify-center items-center snap-end"
+  >
+    <h1 class="font-bold text-4xl">contact me</h1>
+    <br />
+    <div class="flex gap-3 justify-center items-center">
+      <a href="http://">
+        <span class="material-symbols-rounded text-3xl pt-1 font-medium"> call</span>
+      </a>
+      <a href="https://www.instagram.com/mekhla_/">
+        <Image src={insta} height="33" alt="" srcset="" />
+      </a>
+      <a href="https://www.instagram.com/mekhla_/">
+        <Image src={whatsapp} height="33" alt="" srcset="" />
+      </a>
+      
+    </div>
   </div>
 </Layout>
